@@ -1,1 +1,4 @@
-@import "base";
+#root {
+  @import "base";
+  @import "overrides";
+}
