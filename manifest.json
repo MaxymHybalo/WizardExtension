@@ -6,7 +6,11 @@
     "icons": {
         "128": "assets/icon.svg"
     },
-    "permissions": ["activeTab"],
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "debugger"
+    ],
     "browser_action": {
         "default_icon": "assets/icon.png",
         "default_popup": "dist/index.html"

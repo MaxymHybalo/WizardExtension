@@ -9,7 +9,6 @@ import store from './store/Store';
 
 import Layout from './components/popup/Layout';
 
-console.log(store);
 ReactDOM.render(
   <Provider Store={store}>
     <Layout />
