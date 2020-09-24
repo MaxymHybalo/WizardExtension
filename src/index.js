@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import 'antd/dist/antd.min.css';
 import './styles/index.scss';
 

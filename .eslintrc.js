@@ -22,4 +22,7 @@ module.exports = {
     'no-unused-vars': ['error', { varsIgnorePattern: '^React$' }],
     'react/jsx-filename-extension': [1, { extensions: ['js', 'jsx'] }],
   },
+  globals: {
+    chrome: false,
+  },
 };
