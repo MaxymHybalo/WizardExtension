@@ -1,4 +1,5 @@
 import { observable, action } from 'mobx';
+import messenger from '../extension/messenger';
 
 class Store {
     @observable jira = false;
@@ -7,6 +8,7 @@ class Store {
 
     @action updateJIRA() {
       this.jira = !this.jira;
+      messenger.sendMessage({ jira: this.jira });
     }
 }
 
