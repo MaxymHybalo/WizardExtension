@@ -21,6 +21,8 @@ module.exports = {
   rules: {
     'no-unused-vars': ['error', { varsIgnorePattern: '^React$' }],
     'react/jsx-filename-extension': [1, { extensions: ['js', 'jsx'] }],
+    'max-classes-per-file': ['error', 2],
+    'class-methods-use-this': 'off'
   },
   globals: {
     chrome: false,
