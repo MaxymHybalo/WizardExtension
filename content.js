@@ -1,16 +1,6 @@
 console.log('Welcome extension script');
 
-// function
-// chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-//   handleJIRA(request.jira);
-//   console.log(chrome.storage.local.get(['test'], (result) => {
-//     console.log('chrome.storage.local', result);
-//   }));
-// });
-
-// console.log(chrome.storage.local.get(['test'], (result) => {
-//   console.log('chrome.storage.local', result);
-// }));
+const ATLASSIAN_DOMAIN = 'atlassian.net';
 
 class Tweaks {
   constructor(config) {
@@ -52,6 +42,7 @@ class Extension {
   }
 
   tweaks() {
+    if (!window.location.href.includes(ATLASSIAN_DOMAIN)) return;
     chrome.storage.local.get(['tweaks'], (result) => new Tweaks(result.tweaks));
   }
 }
