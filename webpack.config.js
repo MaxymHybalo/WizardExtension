@@ -1,6 +1,13 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  entry: {
+    popup: './src/index.js',
+    content: './content.js'
+  },
+  output: {
+    filename: '[name].bundle.js'
+  },
   resolve: {
     extensions: ['.js', '.jsx', '.css', '.scss'],
   },
